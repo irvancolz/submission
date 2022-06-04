@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1 class="header-title">
+                Bookshelf
+            </h1>
+        </div>
+        <div class="book-filter-container">
+            <form id="search-book">
+                <div class="form-group">
+                    <input type="text" id="search-input">
+                    <button class="search-btn move">Cari</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div id="add-book-container" class="container">
+            <h1 class="title">Tambah Buku</h1>
+            <form id="add-book-form">
+                <div class="form-group">
+                    <label for="name">Judul buku</label>
+                    <input type="text" name="name" id="input-name" required/>
+                </div>
+                <div class="form-group">
+                    <label for="author">Penulis</label>
+                    <input type="text" name="author" id="input-author" />
+                </div>
+                <div class="form-group">
+                    <label for="year">Tahun</label>
+                    <input type="number" name="year" id="input-year" maxlength="4" min="1500" max="2999"/>
+                </div>
+                <div class="form-group">
+                    <label for="finish">Sudah dibaca</label>
+                    <input type="checkbox" id="is-finish" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn btn move">Buat baru</button>
+                </div> 
+            </form>
+        </div>
+        <div class="main-book-container">
+            <div id="unfinished-read" class="container">
+                <h1 class="title">Belum dibaca</h1>
+                <div class="book-container">
+                    <!-- buku belum selesai dibaca -->
+                </div>
+            </div>
+            <div id="finished-read" class="container">
+                <h1 class="title">Selesai dibaca</h1>
+                <div class="book-container">
+                    <!-- buku sudah selesai dibaca -->
+                </div>
+            </div>
+        </div>
+        <div class="edit-form-wrapper hide">
+            <div id="edit-book-container" class="container">
+                <div class="title-container">
+                    <h1 class="title">Edit Buku</h1>
+                </div>
+                <form id="edit-book-form">
+                    <div class="form-group">
+                        <label for="name">Judul buku</label>
+                        <input type="text" name="name" id="edit-name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Penulis</label>
+                        <input type="text" name="author" id="edit-author" />
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Tahun</label>
+                        <input type="number" name="year" id="edit-year" maxlength="4" min="1500" max="2999"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="finish">Sudah dibaca</label>
+                        <input type="checkbox" id="edit-is-finish" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn btn move">Simpan</button>
+                        <button type="button" class="cancel-btn btn delete">batal</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+        <div id="alert-container" class="hide">
+            <div class="alert show">
+                <p class="alert-text">alert</p>
+            </div>
+        </div>
+        <div id="search-result-container" class="hide">
+            <div class="search-results container show">
+                <h1 class="title">Hasil pencarian</h1>
+                <div class="results-container">
+                    <!-- hasil pencarian disini -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h3 class="footer-title">Bookshelf</h3>
+        <nav class="navigation">
+            <ul>
+                <li class="navlink">
+                    <a href="#add-book-form">buat buku baru</a>
+                </li>
+                <li class="navlink">
+                    <a href="#unfinished-read">buku untuk dibaca</a>
+                </li>
+                <li class="navlink">
+                    <a href="#finished-read">baca lagi</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+    <script src="./script.js" defer></script>
+</html>
